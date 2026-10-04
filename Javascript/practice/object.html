@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="modify()">modify</button>
+    <button onclick="add()">add</button>
+    <button onclick="del()">delete</button>
+    <button onclick="fun()">function</button>
+    <button onclick="objarray()">arrobj</button>
+    <button onclick="arrayofobj()">arrofobj</button>
+    <button onclick="key()">key</button>
+    <button onclick="valuee()">value</button>
+    <button onclick="entriess()">entries</button>
+    <button onclick="destructuring()">ds</button>
+    <button onclick="differentdes()">dif</button>
+    <button onclick="defal()">default</button>
+    <button onclick="assign()">assign</button>
+    <button onclick="create()">create</button>
+    <button onclick="formentries()">formentries</button>
+    <button onclick="hosown()">hosown</button>
+    <button onclick="freeze()">freezw</button>
+    <button onclick="seal()">seal</button>
+    <button onclick="groupby()">groupBy</button>
+   <div id="ans" style="width: 100%; height: 30px; border: 2px solid red;"></div>
+   <script>
+    let obj={
+        name:"anbu",
+        age:22,
+        course:function(){
+            document.getElementById("ans").innerHTML="hello"+this.name;
+        }
+
+    }
+    function modify(){
+        let a=obj.name="arul"
+        document.getElementById("ans").innerHTML=JSON.stringify(obj)
+    }
+    function add(){
+        let a=obj.city="pudukkottai"
+        document.getElementById("ans").innerHTML=JSON.stringify(obj)
+    }
+    function del(){
+        let a=delete obj.age;
+         document.getElementById("ans").innerHTML=JSON.stringify(obj)
+    }
+    function fun(){
+        let obj={
+        name:"anbu",
+        age:22,
+        course:function(){
+            document.getElementById("ans").innerHTML="hello"+this.name;
+        }
+    }
+    obj.course();
+    }
+    function objarray(){
+        let obj={
+            name:"anbu",
+            arr:["java","py","c","c++"]
+        }
+        document.getElementById("ans").innerHTML=obj.arr[2];
+    }
+    function arrayofobj(){
+        let arr=[
+            {name:"anbu",age:22},
+            {name:"arulselvi",age:20},
+            {name:"selvi",age:21}
+        ]
+        document.getElementById("ans").innerHTML=arr[2].name;
+    }
+    function key(){
+        document.getElementById("ans").innerHTML=Object.keys(obj);
+    }
+    function valuee(){
+        document.getElementById("ans").innerHTML=JSON.stringify( Object.values(obj));
+    }
+    function entriess(){
+        document.getElementById("ans").innerHTML=JSON.stringify( Object.entries(obj));
+    }
+    function destructuring(){
+        let{name,age}=obj;
+        alert(name)
+        alert(age)
+    }
+    function differentdes(){
+        let{name:objname,age:objage}=obj;
+        alert(objname)
+        alert(objage)
+    }
+    function defal(){
+        let{name,mark=30}=obj;
+        alert(mark+name)
+    }
+    function assign(){
+        let ob1={
+            name:"anbumani",
+        }
+        let ob2={
+            friendname:"arulselvi"
+        }
+        document.getElementById("ans").innerHTML=JSON.stringify(Object.assign(ob1,ob2,obj));
+    }
+    function create(){
+        let person=Object.create(obj);
+        person.mark=30;
+        document.getElementById("ans").innerHTML=JSON.stringify(person.age);
+    }
+    function formentries(){
+        let array=[["name","gkmani"],["age",20],["dep","cse"]]
+        document.getElementById("ans").innerHTML=JSON.stringify(Object.fromEntries(array))
+    }
+    function hosown(){
+      document.getElementById("ans").innerHTML=Object.hasOwn(obj,"name")
+    }
+    function freeze(){
+        Object.freeze(obj)
+        document.getElementById("ans").innerHTML=obj.val=20;
+        alert(JSON.stringify(obj))
+    }
+    function seal(){
+        Object.seal(obj)
+        document.getElementById("ans").innerHTML=obj.name="arulselvi"
+        alert(JSON.stringify(obj))
+    }
+    function groupby(){
+        let students = [
+    { name: "Anbu", mark: 30 },
+    { name: "Mani", mark: 55 },
+    { name: "Arun", mark: 34 },
+    { name: "Kumar", mark: 40 },
+    { name: "arulselvi", mark: 100 },
+    { name: "gkmani", mark: 40 }
+];
+let result=Object.groupBy(students,s=>s.mark>=35 ? "pass":"fail");
+document.getElementById("ans").innerHTML=JSON.stringify(result);
+
+    }
+
+   </script>
+</body>
+</html>

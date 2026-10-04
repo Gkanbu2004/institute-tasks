@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="ans"></div>
+    <script>
+        let result=new Promise((resolve,reject)=>{
+            let mark=20;
+            if(mark>35){
+                resolve("pass")
+            }
+            else{
+                reject("fail")
+            }
+        });
+        result.then(m=>{
+            document.getElementById("ans").innerHTML=m;
+        })
+        .catch(error=>{
+           document.getElementById("ans").innerHTML=error;
+        })
+        .finally(()=>{
+             document.getElementById("ans").innerHTML+="<br>valthukaal" 
+        })
+        
+        
+        
+
+    </script>
+</body>
+</html>

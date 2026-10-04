@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 10px;margin: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="oa" style="border: 2px solid palevioletred;width: 100%;height: 50px;"></div>
+    <button onclick="FOREACH()">Foreach</button>
+    <button onclick="popex()">pop()</button>
+    <button onclick="pushex()">push()</button>
+    <button onclick="unshiftex()">unshift()</button>
+    <button onclick="shiftex()">shift()</button>
+    <button onclick="includesex()">includes()</button>
+    <button onclick="atex()">at()</button>
+    <button onclick="indexofex()">indexof()</button>
+    <button onclick="lastindexofex()">lastIndexOf()</button>
+    <button onclick="findex()">findex</button>
+    <button onclick="findindexex()">findindex</button>
+    <button onclick="findlastex()">findlast</button>
+    <button onclick="findlastindexex()">findlastindex</button>
+    <button onclick="mapex()">map</button>
+    <button onclick="filterex()">filter</button>
+    <button onclick="reduceex()">reduce</button>
+    <button onclick="someex()">some</button>
+    <button onclick="everyex()">every</button>
+    <button onclick="sliceex()">slice</button>
+    <button onclick="spliceex()">splice</button>
+    <button onclick="joinex()">join</button>
+    <button onclick="TOSTRING()">tostring</button>
+    <button onclick="sortex()">sort</button>
+    <button onclick="reverseex()">reverse</button>
+    <button onclick="tosortedex()">tosort</button>
+    <button onclick="toreversedex()">toreversed()</button>
+    <button onclick="tospliceex()">tosplice()</button>
+    <button onclick="withex()">with</button>
+    <button onclick="flatex()">flat</button>
+    <button onclick="flatmapex()">flatMap()</button>
+    <button onclick="fillex()">fillex()</button>
+    <button onclick="copywithex()">copywith</button>
+    <div id="ans" style="border: 2px solid palevioletred;width: 100%;height: 50px;"></div>
+    <script>
+         
+        let arr=[1,2,3,4,5,6,3]
+        document.getElementById("oa").innerHTML=arr
+         function FOREACH(){
+        let res=""
+           arr.forEach(v=>{
+               if(v%2==0){
+                res+=v+" ";
+            }
+            })
+           
+            document.getElementById("ans").innerHTML=res+"<br>";
+             }
+             function popex(){
+                document.getElementById("oa").innerHTML=arr;
+              document.getElementById("ans").innerHTML=arr.pop();
+             }
+              function pushex(){
+                document.getElementById("oa").innerHTML=arr;
+              document.getElementById("ans").innerHTML=arr.push(100);
+             }
+             function unshiftex(){
+                
+              document.getElementById("ans").innerHTML=arr.unshift(10);
+              document.getElementById("oa").innerHTML=arr;
+             }
+             function shiftex(){
+                
+              document.getElementById("ans").innerHTML=arr.shift();
+              document.getElementById("oa").innerHTML=arr;
+             }
+             function includesex(){
+                 document.getElementById("ans").innerHTML=arr.includes(20);
+                  document.getElementById("oa").innerHTML=arr;
+             }
+             function atex(){
+                 document.getElementById("ans").innerHTML=arr.at(3);
+                  document.getElementById("oa").innerHTML=arr;
+             }
+              function indexofex(){
+                 document.getElementById("ans").innerHTML=arr.indexOf(3);
+                  document.getElementById("oa").innerHTML=arr;
+             }
+             function lastindexofex(){
+                 document.getElementById("ans").innerHTML=arr.lastIndexOf(3);
+                  document.getElementById("oa").innerHTML=arr;
+             }
+             function findex(){
+               let result=arr.find(v=>{
+               return v%3==0
+               
+               })
+                 document.getElementById("ans").innerHTML=result;
+             }
+             function findindexex(){
+               let result=arr.findIndex(v=>{
+               return v%3==0
+               
+               })
+                 document.getElementById("ans").innerHTML=result;
+             }
+              function findlastex(){
+               let result=arr.findLast(v=>{
+               return v%3==0
+               
+               })
+                 document.getElementById("ans").innerHTML=result;
+             }
+              function findlastindexex(){
+               let result=arr.findLastIndex(v=>{
+               return v%3==0
+               
+               })
+                 document.getElementById("ans").innerHTML=result;
+             }
+             function mapex(){
+                let val=arr.map(v=>v*3);
+                 document.getElementById("ans").innerHTML=val;
+
+             }
+             function filterex(){
+                let val=arr.filter(v=>v%3==0);
+                 document.getElementById("ans").innerHTML=val;
+
+             }
+             function reduceex(){
+                let val=arr.reduce((sum,v)=>{
+                    return sum*v;
+                },1)
+                   document.getElementById("ans").innerHTML=val;
+
+             }
+              function someex(){
+                let val=arr.some(v=>v%3==0);
+                 document.getElementById("ans").innerHTML=val;
+
+             }
+              function everyex(){
+                let val=arr.every(v=>v%3==0);
+                 document.getElementById("ans").innerHTML=val;
+
+             }
+             function sliceex(){
+                let val=arr.slice(1,5);
+                 document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+             }
+              function spliceex(){
+                let val=arr.splice(1,4);
+                 document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+             }
+function joinex(){
+    let val=arr.join("-");
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+function TOSTRING(){
+    let val=arr.toString()
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+function sortex(){
+    let val=arr.sort((a,b)=>a-b);
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+function reverseex(){
+    let val=arr.reverse();
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+function tosortedex(){
+    let val=arr.toSorted();
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+function toreversedex(){
+    let val=arr.toReversed()
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+function tospliceex(){
+    let val=arr.toSpliced(2,3)
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+function withex(){
+    let val=arr.with(2,300)
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+function flatex(){
+    let arr2=[1,2,[3,4],6,[6,7]]
+    let val=arr2.flat()
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr2;
+}
+function flatmapex(){
+    let val=arr.flatMap(v=>[v,v+5]);
+     document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+function fillex(){
+    let val=arr.fill("*");
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+function copywithex(){
+    let val=arr.copyWithin(2,6);
+    document.getElementById("ans").innerHTML=val;
+document.getElementById("oa").innerHTML=arr;
+}
+    </script>
+</body>
+</html>

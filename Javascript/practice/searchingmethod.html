@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 10px;padding: 10px;
+        }
+        #c_array{
+            border: 2px solid red;padding: 10px;width: 50%;
+        }
+        #Result{
+             border: 2px solid red;padding: 10px;
+        }
+        button{
+            padding: 10px;margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <span>Current Array:</span>
+    <span id="c_array"></span><br><br><br>  
+    <button id="IndexOF" onclick="INDEXOF()">indexof()</button>
+     <button id="LastIndexOf" onclick="LASTINDEXOF()">Last index of()</button>
+      <button id="include" onclick="INCLUDE()">include()</button>
+       <button id="find" onclick="FIND()">find()</button>
+        <button id="findlast" onclick="FINDLAST()">find last()</button>
+         <button id="findindex" onclick="FINDINDEX()">find index()</button>
+          <button id="findlastindex" onclick="FINDLASTINDEX()">find last index()</button>
+          <p id="Result"></p>
+<script>
+      let arr=["anbu","arul","selvi","mani","raj","selvi"]
+      let num=[1,2,3,4,5,6,7,8]
+      function INDEXOF(){
+        document.getElementById("Result").innerText=arr.indexOf("selvi");
+        document.getElementById("c_array").innerText=arr;
+      }
+        function LASTINDEXOF(){
+        document.getElementById("Result").innerText=arr.lastIndexOf("selvi");
+        document.getElementById("c_array").innerText=arr;
+      }
+        function INCLUDE(){
+        document.getElementById("Result").innerText=arr.includes("selvi");
+        document.getElementById("c_array").innerText=arr;
+      }
+      function FIND(){
+        const ans=num.find(n=>n%2==0);
+document.getElementById("Result").innerText=ans;
+document.getElementById("c_array").innerText=num;
+
+      }
+         function FINDINDEX(){
+        const ans1=num.findIndex(n=>n%2==0);
+document.getElementById("Result").innerText=ans1;
+document.getElementById("c_array").innerText=num;
+
+      }
+        function FINDLAST(){
+        const ans2=num.findLast(n=>n%2==0);
+document.getElementById("Result").innerText=ans2;
+document.getElementById("c_array").innerText=num;
+
+      }
+      function FINDLASTINDEX(){
+        const ans2=num.findLastIndex(n=>n%2==0);
+document.getElementById("Result").innerText=ans2;
+document.getElementById("c_array").innerText=num;
+
+      }
+        
+      
+        
+      
+       
+</script>
+    
+</body>
+</html>

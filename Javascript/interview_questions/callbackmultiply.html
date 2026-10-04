@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function multiply(a,b){
+            return a*b;
+        }
+        function result(a,b,call){
+           let v= call(a,b);
+           console.log(v)
+        }
+        result(20,3,multiply);
+    </script>
+</body>
+</html>

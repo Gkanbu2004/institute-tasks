@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="Stop">Stop</button>
+    <p id="count">0</p>
+    <Script>
+        let count=0;
+        let intervalid;
+        document.getElementById("start").onclick=function(){
+            intervalid=setInterval(function(){
+                count++;
+                document.getElementById("count").innerHTML=count;
+            },1000)
+        }
+        document.getElementById("Stop").onclick=function(){
+            clearInterval(intervalid);
+        }
+
+    </Script>
+</body>
+</html>

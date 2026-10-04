@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td,th,tr{
+            border: 1px solid black;
+            border-collapse:collapse ;
+            text-align: center;
+            padding: 10px;
+        }
+        thead{
+            color: rgb(2, 2, 31);
+            font-size: larger;
+            background-color: aqua;
+            
+        }
+        tbody{
+            color: black;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <p id="ans"></p>
+    <button id="btn" onclick="awaitex()">click</button>
+    <script>
+        async function awaitex(){
+            const ans=document.getElementById("ans")
+            ans.innerHTML+="Fetching data from API with fetch()...\n";
+            try{
+            const response=await fetch('https://jsonplaceholder.typicode.com/todos')
+            if(response.ok){
+            const data=await response.json();
+             let table=`<table><thead><tr><th>User id</th><th>Id</th> <th>title</th> <th>completed</th></tr></thead>
+                
+                `;
+                data.forEach((a)=>{
+                    table+=` <tbody><tr> <td> ${a.userId}</td><td> ${a.id}</td><td> ${a.title}</td><td> ${a.completed ? 'yes':'no'}
+                        </td></tr>`;
+                });
+                table +=`</tbody></table>`;
+                ans.innerHTML+=table;
+            
+            }
+            else{
+                ans.innerHTML=`Server responded with status:${response.status}`
+            }
+            }
+            catch(error){
+            ans.innerHTML+="error occured:"+error;
+            }
+            finally{
+                ans.innerHTML+="\n\n.. operation completed"
+            }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+!
+<!doctype html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>Local Storage — Demo</title> 
+  <style> 
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial; padding: 24px; max-width: 800px; 
+margin: auto; } 
+    header { margin-bottom: 18px } 
+    .card{ border: 1px solid #ddd; padding: 12px; border-radius: 8px; margin-bottom: 12px } 
+    label{ display:block; margin-top:8px } 
+    input[type=text]{ width:100%; padding:8px; box-sizing:border-box } 
+    button{ margin-top:8px } 
+    pre{ background:#f7f7f7; padding:12px; border-radius:6px; overflow:auto } 
+    .flex { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px } 
+  </style> 
+</head> 
+<body> 
+  <!--The localStorage object allows you to save key/value pairs in the browser. 
+      The localStorage object stores data with no expiration date. 
+      The data is not deleted when the browser is closed, and are available for future sessions. 
+ 
+        Save Data to Local Storage 
+            localStorage.setItem(key, value); 
+        Read Data from Local Storage 
+            let lastname = localStorage.getItem(key); 
+        Remove Data from Local Storage 
+            localStorage.removeItem(key); 
+        Remove All (Clear Local Storage) 
+            localStorage.clear(); 
+  --> 
+  <header> 
+    <h1>Local Storage — Demo</h1> 
+    <p>This page demonstrates <code>localStorage</code> in JavaScript.</p> 
+  </header> 
+ 
+  <section class="card"> 
+    <h2>Quick facts</h2> 
+    <ul> 
+      <li><strong>localStorage</strong>: persists across browser sessions (data stays after closing & reopening the 
+browser).</li> 
+      <li>Stores only <em>strings</em>. Use <code>JSON.stringify</code> / <code>JSON.parse</code> for 
+objects or arrays.</li> 
+      <li>Capacity: usually around 5–10 MB per site.</li> 
+    </ul> 
+  </section> 
+ 
+  <section class="card"> 
+    <h2>Simple key/value</h2> 
+    <label for="simpleKey">Key</label> 
+ 
+    <input id="simpleKey" type="text" value="greeting" /> 
+ 
+    <label for="simpleValue">Value</label> 
+    <input id="simpleValue" type="text" value="Hello from localStorage!" /> 
+ 
+    <div class="flex"> 
+      <button id="saveLocal">Save to localStorage</button> 
+      <button id="loadLocal">Load from localStorage</button> 
+      <button id="removeLocal">Remove from localStorage</button> 
+    </div> 
+    <p><strong>Result:</strong> <span id="simpleResult">(no action yet)</span></p> 
+  </section> 
+ 
+  <section class="card"> 
+    <h2>Store an object</h2> 
+    <p>We must stringify objects before saving them to localStorage.</p> 
+    <label for="personName">Name</label> 
+    <input id="personName" type="text" value="" /> 
+ 
+    <label for="personAge">Age</label> 
+    <input id="personAge" type="text" value="" /> 
+     
+    <div class="flex"> 
+      <button id="savePerson">Save object</button> 
+      <button id="loadPerson">Load object</button> 
+    </div> 
+    <pre id="personResult">(no object saved yet)</pre> 
+  </section> 
+ 
+  <section class="card"> 
+    <h2>Store an array</h2> 
+    <p>Add items to a shopping list (array stored in localStorage).</p> 
+    <input id="itemInput" type="text" placeholder="Enter item" /> 
+    <div class="flex"> 
+      <button id="addItem">Add Item</button> 
+      <button id="clearItems">Clear List</button> 
+    </div> 
+    <ul id="itemList"></ul> 
+  </section> 
+ 
+  <section class="card"> 
+    <h2>Snapshot of localStorage</h2> 
+    <button id="showAll">Show snapshot</button> 
+    <button id="clearLocal">Clear localStorage</button> 
+    <pre id="storageSnapshot">(no snapshot yet)</pre> 
+  </section> 
+ 
+  <script> 
+ 
+    let k = ""; 
+    let v = ""; 
+    // ------------------------- 
+    //functions for JSON handling 
+    // ------------------------- 
+    function safeSet(key, value) { 
+      localStorage.setItem(key, JSON.stringify(value)); 
+    } 
+    function safeGet(key) { 
+      const raw = localStorage.getItem(key); 
+      if (raw === null) return null; 
+      try { return JSON.parse(raw); } catch {  // JSON.parse() converts a JSON string into a JavaScript object. 
+         
+        return raw; } 
+    } 
+ 
+    function showSnapshot() { 
+      const local = {}; 
+      for (let i = 0; i < localStorage.length; i++) { 
+        const k = localStorage.key(i); 
+        local[k] = safeGet(k); 
+      } 
+      document.getElementById('storageSnapshot').textContent = JSON.stringify(local, null, 2); 
+    } 
+ 
+    // ------------------------- 
+    // Simple key/value example 
+    // ------------------------- 
+    document.getElementById('saveLocal').onclick = () => { 
+      alert(k); 
+      k = simpleKey.value + "test"; 
+      v = simpleValue.value; 
+      // localStorage stores strings, so this works directly 
+      localStorage.setItem(k, v); 
+      simpleResult.textContent = `Saved '${v}' in localStorage['${k}']`; 
+      showSnapshot(); 
+    }; 
+ 
+    document.getElementById('loadLocal').onclick = () => { 
+      const k = simpleKey.value; 
+      const v = localStorage.getItem(k); 
+      simpleResult.textContent = v ? `localStorage['${k}'] = ${v}` : `(no value found)`; 
+    }; 
+ 
+    document.getElementById('removeLocal').onclick = () => { 
+      localStorage.removeItem(simpleKey.value); 
+      simpleResult.textContent = `Removed localStorage['${simpleKey.value}']`; 
+      showSnapshot(); 
+    }; 
+ 
+    // ------------------------- 
+    // Object example 
+    // ------------------------- 
+    document.getElementById('savePerson').onclick = () => { 
+      const person = { name: personName.value, age: personAge.value }; 
+      safeSet('person_example', person); // store as JSON string 
+      personResult.textContent = 'Person saved!'; 
+      showSnapshot(); 
+    }; 
+ 
+    document.getElementById('loadPerson').onclick = () => { 
+      const person = safeGet('person_example'); 
+      personResult.textContent = person ? JSON.stringify(person, null, 2) : '(no object found)'; 
+    }; 
+ 
+    // ------------------------- 
+    // Array example 
+    // ------------------------- 
+    function renderItems() { 
+      const arr = safeGet('shopping_list') || []; //“Get the saved shopping list from storage. 
+                                                  //But if nothing is found (null, undefined, etc.), 
+                                                  //then use an empty array [] as the default value.” 
+      itemList.innerHTML = arr.map(i => `<li>${i}</li>`).join(''); 
+    } 
+ 
+    document.getElementById('addItem').onclick = () => { 
+      const val = itemInput.value.trim(); 
+      if (!val) return; // if null return 
+      const arr = safeGet('shopping_list') || []; 
+      //Fetches the existing list from storage using safeGet. 
+      //If nothing is stored yet, fall back to an empty array. 
+      arr.push(val); 
+      safeSet('shopping_list', arr); //Saves the updated array back into storage (likely localStorage). 
+      itemInput.value = ''; //Clears the input box after adding. 
+      renderItems(); //Calls a function that updates the displayed list (ul / ol). 
+      showSnapshot(); //Likely shows some debug info or snapshot of storage. 
+    }; 
+ 
+    document.getElementById('clearItems').onclick = () => { 
+      localStorage.removeItem('shopping_list'); 
+      renderItems(); 
+      showSnapshot(); 
+    }; 
+ 
+    renderItems(); 
+ 
+    // ------------------------- 
+    // Show all / clear 
+    // ------------------------- 
+    document.getElementById('showAll').onclick = showSnapshot; 
+    document.getElementById('clearLocal').onclick = () => { 
+      if (confirm('Clear ALL localStorage?')) { 
+        localStorage.clear(); 
+        showSnapshot(); 
+      } 
+    }; 
+ 
+    // Initialize snapshot on page load 
+    showSnapshot(); 
+  </script> 
+</body> 
+</html> 
+ 
+ 
+writer.editor.GO_TO_TOPwriter.editor.GO_TO_BOTTOM

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table,td,th{
+            border: 2px;border-style: solid;border-color: black;
+        }
+        th{
+            background-color: rgb(209, 246, 99);padding-left: 40px;
+        }
+        #c{
+            text-align: center;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        .b{
+            background-color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Grade
+            </th>
+        </tr>
+        <tr class="b">
+            <td>Anbu</td>
+            <td>22</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Arul</td>
+            <td>22</td>
+            <td>c</td>
+        </tr>
+        <tr>
+            <td>raj</td>
+            <td>22</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td colspan="3" id="c">Anbu is best learner</td>
+        </tr>
+    </table>
+</body>
+</html>

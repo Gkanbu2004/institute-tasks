@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="cou"></p>
+    <script>
+        let numbers=["anbu","mani","arul","selvi"]
+        numbers.forEach((num,index)=>
+            {
+            console.log(num,index);
+        });
+
+
+        let n=[1,2,3,4,5,6,7,8,9]
+        n.forEach(val=>{
+          if(val%2!=0){
+            console.log(val);
+          }
+        });
+
+
+        let value=[89,90,67,35,45,23,99,21]
+        value.forEach(v1=>{
+            if(v1>=50){
+                console.log(v1)
+            }
+        })
+
+        let course=["html","css","js","sql","java"]
+        let c=""
+
+        course.forEach(val=>{
+            c+=val+"<br>"
+        })
+        res=document.getElementById("cou").innerHTML=c;
+    </script>
+</body>
+</html>

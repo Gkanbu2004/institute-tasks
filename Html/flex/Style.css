@@ -1,0 +1,285 @@
+*{
+    padding: 0px;;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+min-height: 100vh;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(8, 23, 51);
+    color: aliceblue;
+    padding: 1rem;width: 100vw;
+}
+ a{
+    text-decoration: none;
+    margin-left:1rem;
+    color: aliceblue;
+    transition: color 3s;
+}
+a:hover{
+color: brown;
+}
+
+.welcome i{
+    color: rgb(237, 202, 42);
+   
+}
+.welcomepage{
+  background-color: rgb(190, 226, 233);
+  padding: 1rem;
+  padding-left: 2rem;
+  opacity: 0.7;
+  margin: 1rem;
+  border-radius: 1.5rem;
+}
+.welcome img{
+   
+    position: relative;left: 800px;bottom: 80px;
+    background: transparent;
+    mix-blend-mode: multiply;
+}
+
+.welcome {
+    position: relative;top: 2rem;
+    font-size: 1.5rem;
+}
+.welcome p{
+    font-size: 1rem;
+}
+.coursebox{
+    flex: 1;display: flex;
+   
+    padding: 1rem;
+}
+.box{
+ background-color: aliceblue;
+ box-shadow: 5px 5px 5px rgb(224, 221, 221);
+ padding: 1rem;
+ margin-left: 1rem;
+ flex: 1;
+ height: 7rem;
+ border-radius: 1rem;
+ display: flex;
+ 
+
+}
+
+.task1 p{
+justify-content: center;
+text-align: center;
+position: relative;top: 1.5rem;
+padding-left: 1rem;
+}
+.task2 p{
+justify-content: center;
+text-align: center;
+position: relative;top: 1.5rem;
+padding-left: 1rem;
+}
+.task3 p{
+justify-content: center;
+text-align: center;
+position: relative;top: 1.5rem;
+padding-left: 1rem;
+}
+.task4 p{
+justify-content: center;
+text-align: center;
+position: relative;top: 1.5rem;
+padding-left: 1rem;
+}
+.box1{
+ background-color: aliceblue;
+ box-shadow: 5px 5px 5px rgb(224, 221, 221);
+ padding: 1rem;
+ margin-left: 1rem;
+ flex: 1;
+ height: 17rem;
+ border-radius: 1rem;
+ display: flex;
+ 
+
+}
+
+.title1{
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+.coursetitle{
+    display: flex;
+    padding: 1rem;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.head1{
+    position: relative;left: 5rem;
+}
+.title2{
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+.title3{
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+.title4{
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.p1{
+  position: relative;left: 5rem;
+    text-align: center;
+    
+}
+.box2{
+ background-color: aliceblue;
+ box-shadow: 5px 5px 5px rgb(224, 221, 221);
+ padding: 2rem;
+ margin-left: 2rem;
+ flex: 1;
+ height: 22rem;
+ border-radius: 1rem;
+ display: flex;flex-shrink: 1;
+  width: 20rem;
+   
+justify-content: center;
+}
+.ass1{
+   
+}
+.td1{
+    padding-left: 3rem;
+    padding-bottom: 0.5rem;
+    color: rgb(15, 0, 10);
+}
+#Shedule{
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+th{
+    color: rgb(235, 124, 45);
+}
+.Assignment1{
+    display: flex;
+    flex: 1;
+}
+.head2{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+.box3{
+ background-color: aliceblue;
+ box-shadow: 5px 5px 5px rgb(224, 221, 221);
+ padding: 2rem;
+ margin-left: 2rem;
+ flex: 1;
+ height: 22rem;
+ border-radius: 1rem;
+ justify-content: center;
+  width: 20rem;
+   
+
+}
+
+.box3 img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.box3 td {
+    vertical-align: middle;
+}
+
+.box3 .li {
+    margin-bottom: 0.8rempx;padding-left: 2rem; list-style: none;
+}
+
+.box3 .li span {
+    font-weight: bold;
+}
+
+.box3 .li p {
+    margin: 0.25rem 0;
+    font-size: 0.rem;
+    color: gray;
+   
+}
+.box2 span{
+   font-size: 1rem;
+  font-weight: bold;
+}
+.box2 p{
+    margin: 5px 0 0;
+    font-size: 13px;
+    color: gray;
+}
+.box4{
+ background-color: aliceblue;
+ box-shadow: 5px 5px 5px rgb(224, 221, 221);
+ padding: 2rem;
+ margin-left: 2rem;
+ flex: 1;
+ height: 22rem;
+ border-radius: 1rem;
+ justify-content: center;
+  width: 20rem;
+
+
+}
+.box4 img {
+ position: relative;left: 8.5rem;
+}
+.box4>h3{
+text-align: center;
+}
+.box4>p{
+    text-align: center;margin: 5px 0 0;
+    font-size: 13px;
+    color: rgb(36, 36, 36);
+}
+.box4>button{
+    text-align: center;padding: 0.5rem;position: relative;left: 10rem;margin-top: 2rem;
+    border: 2px solid blue;box-shadow: 2px 2px 2px 2px rgb(161, 156, 156);
+    transition: transform 7s ease-in-out,box-shadow 8s ease-in-out;
+    
+}
+.box4>button:hover{
+    transform: scale(1.2);
+    box-shadow: 100px 5px 5px 5px blue inset;
+    color: brown;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.coursetitle .box1{
+    display: flex;
+    align-items: first baseline;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+     width: 100%;
+    height: 70px; 
+    z-index: 1;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  
+}
+body {
+    margin: 0;
+    padding-top: 70px;
+}

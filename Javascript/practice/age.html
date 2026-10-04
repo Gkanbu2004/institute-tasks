@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="age" placeholder="Enter the age"><button onclick="vote()">click</button>
+    <p id="result"></p>
+    <script>
+       
+        function vote(){
+             let a=Number(document.getElementById("age").value);
+        let b=a>=18?"Eligible for vote":"Not Eligible for vote";
+        
+        document.getElementById("result").innerHTML=b;
+        }
+        
+    </script>
+</body>
+</html>

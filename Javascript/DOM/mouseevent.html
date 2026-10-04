@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ans">hello</p>
+    <button id="click">click</button>
+    <button id="dblclick">dblclick</button>
+    <button id="mousedown">mousedown</button>
+    <button id="mouseup">mouseup</button>
+    <button id="mouseover">mouseover</button>
+    <button id="mouseout">mouseout</button>
+    <button id="mousemove">mousemove</button>
+<script>
+    let c=document.querySelector("#click");
+    c.addEventListener("click",function(){
+  document.getElementById("ans").innerHTML="welcome"
+    })
+    let d=document.querySelector("#dblclick");
+    d.addEventListener("dblclick",function(){
+        document.getElementById("ans").innerHTML="welcome"
+    })
+ let e=document.querySelector("#mousedown");
+   // e.addEventListener("mousedown",function(){
+       // document.getElementById("ans").innerHTML="java"
+    //})
+     e.addEventListener("mouseup",function(){
+        document.getElementById("ans").innerHTML="javafx"
+    })
+    let f=document.querySelector("#mouseover");
+    f.addEventListener("mouseover",function(){
+        document.getElementById("ans").innerHTML="welcome"
+    })
+    let g=document.querySelector("#mouseout");
+    g.addEventListener("mouseout",function(){
+        document.getElementById("ans").innerHTML="well"
+    })
+     let h=document.querySelector("#mousemove");
+    h.addEventListener("mousemove",function(){
+        document.getElementById("ans").innerHTML="all is well "
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="oa" style="border: 2px solid red ; width: 200px; height: 50px;"></div>
+    <button onclick="showre()">map()</button>
+    <h2 id="res"style="border: 2px solid red ; width: 200px; height: 50px;"></h2>
+    <script>
+        let arr=[10,23,45,67,89,20,49,90]
+        document.getElementById("oa").innerHTML=arr;
+        let con=arr.some(val=>{
+            return val%10==0;
+        })
+        function showre(){
+            
+            document.getElementById("res").innerHTML=con
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flex Shrink Practice</title>
+
+    <style>
+        .container {
+            width: 500px;
+            display: flex;
+            border: 3px solid black;
+        }
+
+        .box {
+            width: 300px;
+            height: 100px;
+            margin: 10px;
+            background-color: lightblue;
+            border: 2px solid black;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .a {
+       flex-shrink: 0;flex-grow: 3
+       ;
+        }
+
+        .b {
+            flex-shrink: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box a">BOX A Lorem consectetur asit amet consectetur a sit amet consectetur adipisicing elit. Voluptas, tempore.</div>
+        <div class="box b">BOX B</div>
+    </div> 
+
+</body>
+</html>

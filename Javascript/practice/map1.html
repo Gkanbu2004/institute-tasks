@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="oa" style="border: 2px solid red ; width: 200px; height: 50px;"></div>
+    <button onclick="showresult()">map()</button>
+    <h2 id="res"style="border: 2px solid red ; width: 200px; height: 50px;"></h2>
+    <script>
+        let arr=[20,30,40,50]
+        document.getElementById("oa").innerHTML=arr;
+        let ans=arr.map(val=>{
+            return val-5;
+        })
+        function showresult(){
+            document.getElementById("res").innerHTML=ans;
+        }
+    </script>
+</body>
+</html>

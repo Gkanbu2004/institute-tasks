@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .main_box{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            padding: 25px;
+            border: 2px solid red;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            width: 200px;height: 250px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 10px inset;
+        }
+    </style>
+</head>
+<body style="background-color: blanchedalmond;">
+    
+    <div id="getdata" class="main_box"></div>
+    <script>
+        function fetchex(handleData){
+            fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response=>{
+                return response.json();
+            })
+            .then(response=>{
+                handleData(response);
+            })
+            .catch(error=>document.getElementById("getdata").innerHTML=error);
+
+        }
+        function handleData(response){
+            response.forEach((a,b) => {
+                 //let display=JSON.stringify(a,null,2);
+            document.getElementById("getdata").innerHTML+=`<div class=box><h4>Data.${b+1}</h4>
+                <p><b>user id:</b>${a.userId}</p>
+                <p><b>ID:</b>${a.id}.</p>
+                <p><b>title:</b>${a.title}.</p>
+                <p><b>Completed:</b>${a.completed ?"yes":"no"}</div>`
+        })
+            }
+        fetchex(handleData);
+    </script>
+</body>
+</html>

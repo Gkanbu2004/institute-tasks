@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">NAME: <input type="text" name="" id="name"></label><br>
+        <label for="">Age: <input type="text" id="age"></label>
+        <p id="ans"></p>
+        <button onclick="submit()">submit</button>
+
+        
+    </div>
+    <script>
+       // let n=Number(document.querySelector("#name")).value;
+        
+        function submit(){
+            let a=Number(document.querySelector("#age").value);
+        if(a>=18){
+         document.querySelector("#ans").innerHTML="eligibe";
+
+        }
+        else{
+            document.querySelector("#ans").innerHTML="noteligibe";
+        }}
+    </script>
+</body>
+</html>

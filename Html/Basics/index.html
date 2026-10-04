@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            margin-right: 400px;
+            margin-left: 400px;
+            margin-top: 100px;
+            padding-top: 30px;
+            padding-bottom:30px ;
+            padding-left: 20px;
+            border-color: rgb(242, 5, 135);
+            border: 4px;
+            border-style: solid;
+            background-color: rgb(245, 246, 246);
+            border-radius: 20px;
+            padding-top: 50px;
+        }
+        legend{
+            color: rgb(255, 30, 0);
+            font-size: larger;
+            font-weight: bolder;
+            text-align: center;
+        }
+        input{
+            border: 1px; border-color: blue;border-width: 2px; border-style: solid;
+border-radius: 2px;  height: 30px;    }
+#username{
+    margin-left: 40px; width: 250px;
+}
+#password{
+    margin: 20px; width: 250px; 
+}
+#mail{
+     margin-left: 45px; width: 250px; margin-bottom: 20px;
+}
+#dep{
+    margin-left: 40px; margin-bottom: 20px;width: 15px;
+}
+#skill{
+    margin-left: 30px;margin-bottom: 20px;
+}
+#age{
+    margin-left: 50px;width: 250px;margin-bottom: 20px;
+}
+#habbies{
+   margin-bottom: 20px; margin-left: 20px;border-color: blue;border: 2px; border-style: solid;color: blue;
+}
+#b{
+  margin-left: 20px; color: blue;margin-top: 20px;
+}
+#b1{
+    margin-left: 80%; color: blue;margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <form action="about.php" method="get">
+        <fieldset>
+            <legend><strong>Login Form</strong></legend>
+            <label for="username"><b>Name:</b></label>
+            <input type="text" id="username" name="username" required value="mani" max="10" min="3"><br>
+            <label for="password"><b>password</b></label>
+            <input type="password" id="password" name="password"required placeholder="please enter the password"> <br>
+            <label for="mail"><b>Email</b></label>
+            <input type="email" id="mail" name="mail" placeholder="please enter the email" required autocomplete="email">
+       <br>
+            <label for="dep"><b>Department</b></label><br>
+            <input type="radio" id="dep" name="dep">CSE
+             <input type="radio" id="dep" name="dep">ECE
+              <input type="radio" id="dep" name="dep">IT
+               <input type="radio" id="dep" name="dep">EEE
+
+               <br>
+               <label for="skill"><b>Skills</b></label><br>
+               <input type="checkbox" id="skill" name="skill">java
+               <input type="checkbox" id="skill" name="skill">python
+               <input type="checkbox" id="skill" name="skill">c
+               <input type="checkbox" id="skill" name="skill">js
+               <br>
+                <label for="age"><b>Age</b></label>
+               <input type="number" value="age" id="age" name="age"><br>
+               <label for="habbies"><b>Habbies</b></label>
+               <select name="habbies" id="habbies">
+                <option value="cricket">cricket</option>
+                <option value="kabbadi">kabbadi</option>
+                <option value="listening music">listening music</option>
+               </select><br>
+               <button type="submit" id="b">Submit</button>
+               <button type="reset" id="b1">reset</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+<label for="">Name</label>
+<input type="text" id="name">
+<label for="">Age</label>
+<input type="number" id="age">
+<label for="">email</label>
+<input type="email" id="email">
+<p id="error"></p>
+<button type="button" onclick="submt()">click</button>
+    </form>
+<script>
+    function submt(){
+        let name=document.getElementById("name").value;
+         let age=document.getElementById("age").value;
+          let email=document.getElementById("email").value;
+           let error=document.getElementById("error");
+           if(name===""&&age===""&&email===""){
+        error.innerHTML="plese all details filled"
+       }
+       else if(name===""){
+         error.innerHTML="please enter the name"
+       }
+       else if(age===""){
+         error.innerHTML="please enter the age"
+       }
+       else if(email===""){
+         error.innerHTML="please enter the email"
+       }
+        
+    }
+</script>
+</body>
+</html>

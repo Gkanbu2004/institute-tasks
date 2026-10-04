@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">name: <input type="text" id="name"></label><br>
+    <label for="">age: <input type="text" id="age"></label><br>
+    <button onclick="SAVE()">save</button>
+    <button onclick="GET()">get</button>
+    <p id="result"></p>
+    <script>
+        function SAVE(){
+            let person={
+                name:document.getElementById("name").value,
+                age:document.getElementById("age").value
+            }
+            localStorage.setItem("person",JSON.stringify(person));
+            document.getElementById("result").innerHTML="saved"
+        }
+        function GET(){
+            let data=localStorage.getItem("person");
+            let person=JSON.parse(data);
+            document.getElementById("result").innerHTML="Name:"+person.name +"age:"+person.age;
+        }
+    </script>
+</body>
+</html>

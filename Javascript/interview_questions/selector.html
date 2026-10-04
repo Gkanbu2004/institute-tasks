@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1,p{
+            color: red;
+        }
+        div>h1:first-child{
+            color: blue;
+        }
+        .box2+li{
+            color: green;
+            font-size: larger;
+        }
+        .box3~li{
+            font-weight: bold;
+            color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"> 
+    <p>Paragraph 1</p> 
+    <section> 
+        <p>Paragraph 2</p> 
+    </section> 
+</div> 
+ 
+<p>Paragraph 3</p> 
+
+<div>
+    <h1>hello</h1>
+    <section><h1>welcome</h1></section>
+    <h1>hello</h1>
+</div>
+
+  <p class="box2">hello</p>
+    <li>java</li>
+    <li>css</li>
+    <li>html</li>
+ <p class="box3">hello</p>
+    <li>java</li>
+    <li>css</li>
+    <li>html</li>
+
+</body>
+</html>

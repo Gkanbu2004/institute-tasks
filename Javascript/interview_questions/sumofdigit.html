@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card border border-dark w-50 ms-4 mt-4">
+        <div class="card-body p-4">
+           <h3 class="card-title text-center text-primary">Sum of digits</h3>
+           <label for="" class="form-label">value</label>
+           <input type="number" class="form-control" id="val">
+           <div class="card border border-dark text-danger" id="res"></div>
+           <button class="btn btn-outline-primary" id="bt">click</button>
+        </div>
+    </div>
+    <script>
+        let sum=0;
+        function sumdigit(){
+            let value=document.getElementById("val").value;
+            let ans=document.getElementById("res");
+            for(let i=1;i<=value;i++){
+                sum+=i;
+            }
+            ans.innerHTML=sum;
+        }
+        let b=document.getElementById("bt");
+        b.addEventListener("click",sumdigit);
+    </script>
+</body>
+</html>

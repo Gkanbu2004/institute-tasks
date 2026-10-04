@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="arr"></p>
+    <script>
+        const num=[23,46,67,89]
+        let text=""
+        num.forEach(myfunction);
+document.getElementById("arr").innerHTML=text
+        
+        function myfunction(value){
+            let n=value%2==0?"even:"+value:"odd:"+value;
+            text+=n+"<br>";
+        }
+    </script>
+</body>
+</html>

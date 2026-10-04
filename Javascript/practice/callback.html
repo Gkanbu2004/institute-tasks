@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="greet(display)">Click me</button>
+    <script>
+        function greet(display){
+            let name=prompt("Enetr your name");
+            display(name);
+            alert("Callback end flow");
+        }
+        function display(name){
+            alert("Welcome "+name+ "Anbu");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card border border-dark w-50 ms-5 mt-5">
+        <div class="card-body p-4">
+            <h2 class="card-title text-center text-primary">Check polintrome string</h2>
+            <label for="" class="form-label">String</label>
+            <input type="text" class="form-control" id="str">
+            <div class="card border border-dark " id="res"></div>
+            <button class="btn btn-outline-primary" id="bt">click</button>
+        </div>
+    </div>
+    <script>
+        function poli(){
+           let string=document.getElementById("str").value;
+           let ans=document.getElementById("res");
+           let s="";
+           let orgi=string;
+           for(let i=string.length-1;i>=0;i--){
+            s=s+string.charAt(i);
+           }
+           if(orgi==s){
+            ans.innerHTML=`polindrome`
+           }
+           else{
+             ans.innerHTML=`not polindrome`
+           }
+        }
+        let b=document.getElementById("bt");
+        b.addEventListener("click",poli);
+    </script>
+</body>
+</html>

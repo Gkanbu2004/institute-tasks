@@ -1,0 +1,60 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  table, tr,td,th{
+            border: 2px;border-color: blue;border-style: solid;text-align: center;
+         
+         width: 170px; margin-left: 30px;border-collapse: collapse;
+        }
+        table{
+            
+        }
+        tr{
+            margin: 30px ;
+        }
+        .colspan{
+         background-color: antiquewhite;
+        }
+        tr:nth-child(odd){
+            background-color: brown;
+        }
+        .colright{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>table</caption>
+        <colgroup>
+        <col span="2" class="colspan">
+    <col class="colright"></colgroup>
+        <tr>
+            <th>Name</th>
+            <td>mani</td>
+            <td>anbu</td>
+        </tr>
+        <tr>
+            <th>
+                age
+            </th>
+            <td>
+                22
+
+            </td>
+            <td>
+                22
+            </td>
+        </tr>
+        <tr>
+            <th>id</th>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>
+</body>
+</html>

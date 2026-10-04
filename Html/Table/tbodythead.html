@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table,tr,td,th{
+            border: 2px;border-color: blue;border-style: solid;text-align: center;
+         
+         width: 170px; margin-left: 30px;border-collapse: collapse;
+        }
+        thead{
+            background-color: aquamarine;color: brown;font-size: larger;
+        }
+        tbody{
+            background-color: chocolate;color: black;
+        }
+        tr:nth-child(even){
+            background-color: cornsilk;
+        }
+        caption{
+            background-color: blue;
+        }
+        .c1{
+            background-color: purple;
+        }
+        </style>
+</head>
+<body>
+    <table>
+        <caption>TABLE DATA</caption>
+        <colgroup>
+            <col span="3" class="c1">
+        </colgroup>
+        <thead>
+            
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>dep</th>
+                <th>salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Anbu</td>
+                <td>22</td>
+                <td>CSE</td>
+                <td>20000</td>
+            </tr>
+            <tr>
+                <td>Arul</td>
+                <td>22</td>
+                <td>CSE</td>
+                <td>30000</td>
+            </tr>
+            <tr>
+                <td>Anbu</td>
+                <td>22</td>
+                <td>CSE</td>
+                <td>30000</td>
+            </tr>
+            <tr>
+                <td>Selvi</td>
+                <td>22</td>
+                <td>CSE</td>
+                <td>28000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Sum</td>
+                <td>980000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

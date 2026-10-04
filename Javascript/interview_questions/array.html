@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=["anbu","mani","arulselvi","anbuarul"]
+        console.log(arr[0])
+        console.log(arr[2])
+        console.log(arr[3])
+        let arr2=[1,2,3,4,5,3,6,7]
+        console.log(arr2.push(10))
+        console.log(arr2)
+         console.log(arr2.pop(10))
+        console.log(arr2)
+        console.log(arr2.unshift(10))
+        console.log(arr2)
+         console.log(arr2.shift(10))
+        console.log(arr2)
+         console.log(arr2.indexOf(4))
+        console.log(arr2)
+          console.log(arr2.lastIndexOf(3))
+            console.log(arr2.includes(4))
+            let f=arr2.findIndex((value)=>{
+                return value>=3
+                 
+            })
+            console.log(f)
+              console.log(arr2)
+
+         let arr3=[1,2,3,4,5,6]
+           arr3.forEach(value=>{
+            if(value%2==0){
+            console.log(value)}
+           })
+
+           let m=arr3.filter(v=>{
+            return v%2==0
+           })
+           console.log(m);
+          let r=arr3.reduce((t,v)=>{
+            return t+v;
+          },0)
+          console.log(r)
+          console.log(arr3)
+
+          let mx=arr3.reduce((ma,value)=>{
+            return value>ma?value:ma
+          });
+          console.log(mx)
+
+          let s=arr3.every(v=>{
+            return v%2==0
+          })
+          console.log(s)
+          let arr4=[1,2,3,4,5,6]
+          let sl=arr4.slice(1,5)
+          console.log(sl)
+          console.log(arr4)
+          let sp=arr4.splice(2,0,5)
+          console.log(sp)
+          let can=arr2.concat(arr3);
+          console.log(can)
+          let j=arr3.join("*");
+          console.log(j)
+          console.log(arr2.toString())
+          console.log(arr3.reverse())
+          console.log(arr3)
+          console.log(arr2.sort())
+          console.log(arr2.toSorted())
+          console.log(arr2.toReversed())
+          console.log(arr2)
+          let arr5=[1,2,3,[4,5,6],9]
+          console.log(arr5.flat());
+         let re= arr5.flatMap(v=>
+            [v,v**2]
+          )
+          console.log(re)
+
+          let wd=arr.with(2,"anbbb")
+          console.log(wd)
+          console.log(arr.at(2))
+          console.log(arr.fill(0))
+          
+          console.log(arr4.copyWithin(2,4))
+           let arr7="arulselvi"
+           console.log(Array.from(arr7))
+           let new1=Array.of(1,2,34,9);
+           console.log(new1)
+        
+        
+    </script>
+</body>
+</html>

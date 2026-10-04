@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="form">click</button>
+    <button id="f1">click</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        function main(start,out){
+            let count=start;
+            return function(){
+                count++;
+                document.getElementById(out).innerHTML="count:"+count;         
+                   } 
+        }
+        let c=main(10,"p1");
+        let c1=main(100,"p2");
+        document.getElementById("form").addEventListener("click",c);
+         document.getElementById("f1").addEventListener("click",c1);
+    </script>
+</body>
+</html>

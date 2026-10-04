@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        table,tr,td{
+            border: 2px solid red;border-collapse: collapse;
+        }
+        p{
+            display: flex;justify-content: space-between;padding: 10px;margin-left: 300px;margin-right: 300px;
+        }
+    </style>
+</head>
+<body>
+   <h1>Content</h1> 
+   <p id="tblcontent">
+
+   </p>
+   <script>
+    const names=["mani","anbu","arul","selvi"]
+    for(let name of names){
+     let  result=document.getElementById("tblcontent");
+     result.innerHTML+="<table><tr><td>"+name+"</table></tr></td>";
+    }
+    
+   </script>
+</body>
+</html>

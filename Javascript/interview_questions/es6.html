@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 2px solid red;width: 100%; height: 
+    40%;padding: 40px;" id="ans" ></div>
+    <div id="fun" style="border: 2px solid red;width: 100%; height: 
+    40%;padding: 40px;" ></div>
+    <div id="op" style="border: 2px solid red;width: 100%; height: 
+    40%;padding: 40px;" ></div>
+    <div id="arrow" style="border: 2px solid red;width: 100%; height: 
+    40%;padding: 40px;" ></div>
+    <script>
+        let name="mani";
+        const age=22;
+        let dep="cse";
+        document.getElementById("ans").innerHTML=`I am ${name}.${age} 
+       age old.in the department of ${dep}`;
+      //default parameter
+      function message(name="anbu"){
+        document.getElementById("fun").innerText+=`I am ${name}\n`
+      }
+      message();
+      message("mani")
+      //Array destructuring
+
+      let arr=['anbu','mani','arul','raj','selvi']
+      let [a,b,,,c]=arr;
+      console.log(c);
+
+      //object destructuring
+
+      let obj={
+        name1:'mani',
+        age1:22,
+        dep1:'cse'
+      };
+      let{name1,age1,dep1}=obj;
+      console.log(age1)
+      //Copy an array using spread operator.
+      
+      let x=[1,2,3,4,5]
+      let y=[6,7,8]
+
+      document.getElementById("op").innerHTML=y;
+      //rest operator
+
+      function mul(...n){
+        let m=1;
+        n.forEach(v=>{
+            m*=v;
+        });
+        console.log(m)
+      }
+      mul(5,10,15,20,25)
+      //arrow function
+
+      let sum=(a,b)=>{
+        return a+b;
+      }
+      document.getElementById("arrow").innerHTML=sum(20,30);
+//class constructor
+class student{
+    
+    constructor(name,dep){
+        this.name=name;
+       this.dep=dep;
+    }
+    outputex(){
+        console.log(`i am ${this.name}`)
+        console.log(`department of ${this.dep}`)
+    }
+
+}
+let s=new student("mani","cse")
+s.outputex()
+    </script>
+</body>
+</html>

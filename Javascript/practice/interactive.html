@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        #Name{
+            border: 2px;border-color: blue;border-radius: 2px;border-style: solid;margin-left: 70px;
+        }
+        #email{
+             border: 2px;border-color: blue;border-radius: 2px;border-style: solid;margin-left: 70px;
+        
+        }
+        #password{
+             border: 2px;border-color: blue;border-radius: 2px;border-style: solid;margin-left: 50px;
+        
+        }
+        #Addressbar{
+            border: 2px;border-color: blue;border-radius: 2px;border-style: solid;margin-left: 55px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="submit.php" method="post">
+        
+        <p>Please Enter your <strong>Login Form</strong></p>
+        <label for="Name"><b>Name</b></label>
+        <input type="text" required value="mani" name="Name" id="Name"><br>
+        <br>
+        <label for="email">E mail</label>
+        <input type="email" placeholder="please Enter your E mail" name="email" id="email"><br>
+        <br>
+        <label for="password">password</label>
+        <input type="password" name="password" placeholder="Enter your password" id="password"><BR></BR>
+        <label for="Addressbar">Address</label>
+        <textarea name="" id="" rows="4" cols="43"></textarea><br><br>
+        <label for="male">male</label>
+        <input type="radio" id="male" name="Female" value="">
+    
+        <label for="Female">Female</label>
+        <input type="radio" id="Female" name="Female" value="">
+        <label for="checkboox"></label>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function showresult(res1,res2){
+        console.log(res1+":"+res2)
+    }
+    function student(name,mark,callback){
+        let val=mark>=50?"pass":"fail";
+        callback(name,val);
+    }
+    student("anbu",89,showresult);
+     student("anbu",39,showresult);
+       
+    </script>
+</body>
+</html>

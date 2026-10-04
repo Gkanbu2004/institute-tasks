@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Name</label>
+        <input type="text" name="" id="name">
+        <p id="nameerror"></p>
+    </form>
+    <script>
+        let name=document.getElementById("name");
+        let nameerror=document.getElementById("nameerror");
+        name.addEventListener("input","blur",()=>{
+            if(name.value.trim()===""){
+                nameerror.innerHTML="name is required";
+            }
+            else if(name.value.length<=3){
+                nameerror.innerHTML="Minimum 3 characters";
+            }
+            else{
+                nameerror.innerHTML="";
+            }
+        })
+    </script>
+</body>
+</html>

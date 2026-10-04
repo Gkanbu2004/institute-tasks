@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Name:</label><br>
+    <input type="text" id="name">
+    <label for="">age:</label>
+    <input type="number" name="" id="age">
+    <button onclick="SAVE()">save</button>
+    <button onclick="GET()">get</button>
+    <button onclick="REMOVE()">remove</button>
+    <button onclick="CLEAR()">clear</button>
+    <p id="show"></p>
+    <div id="result"></div>
+    <script>
+let n;
+let a;
+function SAVE(){
+    n=document.getElementById("name").value;
+    a=document.getElementById("age").value;
+    localStorage.setItem(n,a);
+    document.getElementById("show").innerHTML=`save name:${n},age:${a}`;
+}
+function GET(){
+    a=localStorage.getItem(n);
+    document.getElementById("show").innerHTML=a? `${a}`:"key not";
+}
+function REMOVE(){
+    localStorage.removeItem(n);
+    document.getElementById("show").innerHTML=`removed ${n}`
+}
+function CLEAR(){
+    localStorage.clear();
+    document.getElementById("show").innerHTML="clear ALL"
+}
+    </script>
+</body>
+</html>

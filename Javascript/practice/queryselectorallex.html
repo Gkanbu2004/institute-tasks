@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="gk">hello</div>
+    <p class="gk">anbu</p>
+    <p class="gk">arul</p>
+    <p class="gk">selvi</p>
+    <p class="gk">raju</p>
+    <button onclick="changequery()">click</button>
+    <script>
+        function changequery(){
+            const paras=document.querySelectorAll(".gk");
+            paras.forEach((v,i)=>{
+                if(i==0){
+                    v.textContent=`this is a  ${i+1}div`;
+                    
+                }
+                
+                else{
+                v.textContent=`this is a ${i}para`;}
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+     <div class="card border border-dark border2 w-50 p-4">
+        <div class="card-body">
+            <h2 class="card-title text-center">Check Polintrome number</h2>
+            <label for="" class="form-label">Value</label>
+            <input type="number" name="" id="num" class="form-control">
+            <div class="card border border-dark mt-4" id="result"></div>
+            <button class="btn btn-outline-primary mt-4" id="view">click</button>
+        </div>
+    </div>
+    <script>
+        
+        function poli(){
+            let value=document.getElementById("num").value;
+            let ans=document.getElementById("result");
+             let original=value;
+             let rev=0,sum=0
+            while(value!=0){
+               
+                 let digit=value%10;
+                 rev=rev*10+digit;
+                 value=Math.floor(value/10);
+                 sum++;
+            }
+            console.log(sum)
+            if(original==rev){
+          ans.innerHTML="poly"
+            }
+            else{
+                ans.innerHTML="not poly"
+            }
+           
+        }
+        let bt=document.getElementById("view");
+        bt.addEventListener("click",poli)
+    </script>
+</body>
+</html>

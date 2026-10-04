@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+          border: 1px solid black;display: inline-block;padding: 20px;border-radius: 5px;margin-left: 40px;
+        }
+        .a{
+            background-color: brown;
+        }
+        .b{
+            background-color: yellow;
+        }
+        .c{
+            background-color: green;
+        }
+        .d{
+            background-color: aquamarine;
+        }
+        .e{
+            background-color: blueviolet;
+        }
+        .f{
+            background-color: rgb(226, 43, 128);
+        }
+        .a1{
+            display: none;background-color: antiquewhite;
+            position: absolute;padding: 20px;margin-top: 21px;
+            border: 2px solid black;
+        }
+        .box:hover .a1 {
+            display: block;
+            
+
+        }
+        .a:hover {
+            background-color: white;color: black;
+            cursor: pointer;
+        }
+        .a1 li:hover{
+            color: blue;
+        }
+
+       .a2{
+        display: none;
+        background-color: bisque;
+        position: absolute;padding: 20px;margin-top: 21px; border: 2px solid black;
+       }
+       .b:hover .a2{
+        display: block;
+       }
+       .b:hover{
+          background-color: rgb(222, 135, 142);
+       }
+ @media(max-width:600px){
+        .box{
+            display: block; 
+            text-align: center;
+            margin-right: 200px;
+            margin-left: 200px;
+             
+        }
+    }
+       
+
+    </style>
+</head>
+<body>
+    <div class="box a">box a
+        <div class="a1">
+           <ol>
+            <li>a1</li>
+            <li>a2</li>
+            <li>a3</li>
+            <li>a4</li>
+           </ol>
+         </div>
+    </div>
+     <div class="box b">box b
+        <div class="a2">
+           <ol>
+            <li>a1</li>
+            <li>a2</li>
+            <li>a3</li>
+            <li>a4</li>
+           </ol>
+         </div>
+     </div>
+      <div class="box c">box c</div>
+       <div class="box d">box d</div>
+        <div class="box e">box e</div>
+         <div class="box f">box f</div>
+         <p>hello Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit soluta veniam magnam earum blanditiis, dolores aliquid, quisquam mollitia est aperiam omnis repellat quibusdam? Minima nam quos animi quis officiis? Laudantium?</p>
+         
+</body>
+</html>

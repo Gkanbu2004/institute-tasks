@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sum()" id="b1">sum</button>
+    <button onclick="showresult()" id="b2">mul</button>
+    <button onclick="ressub()">sub</button>
+    <button onclick="res()">div</button>
+    <button onclick="vote('anbu', 22 ,result)">callback</button>
+    <button onclick="re()">foreach</button>
+    <h2 id="result" style="width: 100px; height: 50px;border: 2px solid red;"></h2>
+    <h3 id="box2" style="width: 100px; height: 50px;border: 2px solid red;"></h3>
+    <script>
+        //sum of two number using function.
+    let a=10;
+    let b=20;
+        function sum(){
+            c=a+b;
+            document.getElementById("result").innerHTML=c;
+        }
+        //expresion
+     let multiply=function(x,y){
+        return x*y;
+     } 
+     function showresult(){ 
+     let r=multiply(10,20);
+     document.getElementById("result").innerHTML=r
+     }
+     //arrow function
+      let sub=(a,b)=>a-b;
+      function ressub(){
+      document.getElementById("result").innerHTML=sub(30,20)}
+      //function with parameters and return a value
+      function divisible(n){
+        let res=n%2==0?"even":"odd";
+        return res;
+      }
+      function res(){
+     let re= divisible(10);
+      document.getElementById("result").innerHTML=re;}
+
+      //callback
+
+      function result(val,arg){
+        document.getElementById("box2").innerHTML=val +" is " +arg
+      }
+      function vote(name,age,callback){
+let con=age>=18?"eligible":"not eligible";
+callback(name,con);
+      }
+      // foreach
+
+      let arr=[1,2,3,4,5,6,7,9,10]
+      let c=0;
+      arr.forEach(value=>{
+        c+=value;
+      })
+      function re(){
+      res=document.getElementById("box2").innerHTML=c;
+      }
+    </script>
+</body>
+</html>

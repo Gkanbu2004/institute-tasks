@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="box">one</p>
+    <p class="box">two</p>
+    <p class="box">three</p>
+    <script>
+       let f= document.getElementsByClassName("box");
+       for(let i=0;i<f.length;i++){
+        f[i].innerHTML="ten";
+       }
+    </script>
+</body>
+</html>

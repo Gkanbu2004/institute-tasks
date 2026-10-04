@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">item: <input type="text" id="item"></label>
+    <button onclick="SAVE()">save</button>
+    <button onclick="GET()">get</button>
+    <p id="result"></p>
+    <script>
+        function SAVE(){
+            let v=document.getElementById("item").value;
+            let arr=JSON.parse(localStorage.getItem("items"))|| [];
+arr.push(v);
+localStorage.setItem("items",JSON.stringify(arr))
+        }
+
+        function GET() {
+
+            let arr = JSON.parse(
+                localStorage.getItem("items")
+            ) || [];
+
+            document.getElementById("result").innerHTML = "";
+
+            arr.forEach(item => {
+
+                document.getElementById("result").innerHTML +=
+                    "<li>" + item + "</li>";
+
+            });
+
+        }
+    </script>
+</body>
+</html>

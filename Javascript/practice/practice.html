@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">name: <input type="text" id="name"></label><br>
+    <label for="">age: <input type="text" id="age"></label><br>
+    <label for="">city: <input type="text" id="city"></label>
+    <button onclick="SAVE()">save</button>
+    <p id="res"></p>
+    <script>
+     let n,a,c;
+     function SAVE(){
+        n=document.getElementById("name").value;
+        a=document.getElementById("age").value;
+        c=document.getElementById("city").value;
+        localStorage.setItem(n,a,c);
+        document.getElementById("res").innerHTML=`saved ${n},${a},${c}`
+     }
+    </script>
+</body>
+</html>

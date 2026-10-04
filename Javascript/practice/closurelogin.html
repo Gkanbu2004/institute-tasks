@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="login">login</button>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        function counterform(){
+            let attempt=0;
+            return function(){
+                if(attempt<3){
+
+                    attempt++;
+                    document.getElementById("p1").innerHTML="attempt:"+attempt
+                    
+                }
+                else{
+                    document.getElementById("p2").innerHTML="Account locked"
+                }
+            }
+        }
+        let c=counterform();
+        document.getElementById("login").addEventListener("click",c)
+    </script>
+</body>
+</html>

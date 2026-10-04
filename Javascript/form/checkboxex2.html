@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="
+    ">
+<input type="checkbox" id="java"> 
+<label for="">java</label>
+<input type="checkbox"  id="c"> 
+<label for="">c</label>
+<input type="checkbox"  id="python"> 
+<label for="">python</label>
+<p id="error"></p>
+<button type="button" onclick="checkskill()">check</button>
+</form>
+<script>
+    function checkskill(){
+        let java=document.getElementById("java")
+         let c=document.getElementById("c")
+          let python=document.getElementById("python")
+          let error=document.getElementById("error");
+          if(java.checked===false&&c.checked===false&&python.checked===false){
+               error.innerHTML = "Please select atleast one skill";
+          }
+          else{
+               error.innerHTML = "All skill are selected";
+          }
+    }
+</script>
+</body>
+</html>

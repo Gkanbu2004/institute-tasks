@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="child">click</button>
+    </div>
+    <p id="show"></p>
+    <script>
+        let p=document.getElementById("parent")
+        let c=document.getElementById("child")
+        let s=document.getElementById("show")
+        p.addEventListener("click",function(){
+            s.innerHTML+="parent node"
+        })
+
+        c.addEventListener("click",function(){
+            s.innerHTML+="child node"
+           // event.stopPropagation();
+        })
+    </script>
+</body>
+</html>

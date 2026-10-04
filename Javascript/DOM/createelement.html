@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.main{color: green;}
+        .main2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <script>
+        let c=document.createElement("p");
+        c.innerText="hi iam anbumani"
+        let a= document.getElementById("box")
+        a.appendChild(c)
+        c.className="main";
+        let h=document.createElement("h2");
+        h.innerHTML="selvi"
+        
+        a.appendChild(h);
+        a.className="main2"
+
+        let inp=document.createElement("input");
+        inp.setAttribute("type","number");
+
+        inp.setAttribute("placeholder","enter the age");
+        a.appendChild(inp);
+        let arr=["anbu","selvi","mani","arul","raj"]
+        arr.forEach(e=>{
+            let name= document.createElement("h1");
+          name.innerText=e;
+            a.appendChild(name);
+        })
+    </script>
+</body>
+</html>

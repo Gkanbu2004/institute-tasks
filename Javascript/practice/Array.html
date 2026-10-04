@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1"></h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <script>
+        let arr=["anbu","mani","arul","selvi",23];
+        function indexarray(){
+           // let index=1;
+            document.getElementById("head1").innerText="intdex of 1:"+arr.at(3);
+        }
+        indexarray();
+        function joinarray(){
+document.getElementById("p1").innerText=arr.join("-")
+        }
+        joinarray();
+        function Tostring(){
+document.getElementById("p2").innerText=arr.toString();
+document.getElementById("p3").innerText="pop:"+arr.pop();
+arr.push("raj")
+document.getElementById("p4").innerText="push:"+arr;
+document.getElementById("p5").innerText="shift:"+arr.shift();
+arr.unshift("susi")
+document.getElementById("p6").innerText="unshift:"+arr;
+
+        }
+        Tostring();
+
+    </script>
+</body>
+</html>

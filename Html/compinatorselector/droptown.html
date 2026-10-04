@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown{
+            position: relative;
+        }
+        .b1{
+            background-color: brown;padding: 20px;border-color: azure;cursor: pointer;
+        }
+        .dropdown-content{
+            display: none;
+             position: absolute;   
+            background-color: rgb(232, 236, 240);
+            width: 170px;
+        top: 150%; left: 0;}
+       
+        .dropdown-content a{
+            padding: 20px;color: rgb(11, 7, 0);text-decoration: none;display: block;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        .b1:hover {
+            background-color: chartreuse;
+        }
+        .dropdown-content a:hover{
+            background-color: blue;
+        }
+  
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button type="button" class="b1">menu</button>
+        <div class="dropdown-content">
+            <a href="">link1</a>
+              <a href="">link2</a>
+                <a href="">link3</a>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, nam!</p>
+</body>
+</html>

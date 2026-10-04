@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <header>
+    <h1> STUDENT ADMISSION FORM</h1>
+   </header> 
+   <form action="submit.php" method="post">
+    <label for="name">Full Name:</label>
+    <input type="text" required value="mani" id="name"><br>
+    <label for="mail">E mail:</label>
+    <input type="email" id="mail" name="mail" required autocomplete="email"><br>
+    <label for="pass">password:</label>
+    <input type="password" id="pass" name="pass"><br>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob"><br>
+    <label for="g">Gender</label>
+    <input type="radio" name="g">male
+    <input type="radio" name="g">Female
+    <input type="radio" name="g">others <br>
+    <label for="a">Skills</label>
+    <input type="checkbox" id="a" name="a">java
+    <input type="checkbox" id="b" name="a">c
+    <input type="checkbox" id="c" name="a">python
+    <input type="checkbox" id="d" name="a">html
+    <br>
+    <label for="datemax">enter the date after date 24-12-2004</label>
+    <input type="date" min="2003-12-24"><br>
+    <label for="favcolor">favirate color</label>
+    <input type="color" name="favcolor" id="favcolor"><br>
+    <label for="datetime">DAte and time:</label>
+    <input type="datetime-local" id="datetime" name="datetime"><br><br>
+    <input type="image" source="D:\anbuhtml\images2.jpg" alt="submit" width="100px" height="80px"><br>
+    <label for="">Department</label>
+    <select name="Department" id="Department">
+        <option value="cse">cse</option>
+         <option value="IT">IT</option>
+          <option value="Ece">ECe</option>
+           <option value="EEe">EEe</option>
+            <option value="mech">mech</option>
+    </select><br>
+    
+    <textarea name="" id="" cols="14" rows="3" required>Address:</textarea><br>
+    <input type="hidden" id="cudtID" name="cudtID" value="12345"><br>
+    <label for="">Upload photos:</label>
+    <input type="file"><br>
+    <input type="button" value="save">
+    <button type="submit">submit</button>
+    <button type="reset">reset
+
+    </button>
+    <br><br>
+    <button type="submit">
+        <img src="images2.jpg" alt="img" width="50px" height="50px" >submit
+    </button>
+<br><br>
+<button type="button" name="b">save</button>
+<button type="button" name="b">delete</button>
+   </form>
+</body>
+</html>

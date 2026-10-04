@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function welcome(){
+            console.log("welcome to java script");
+        }
+        welcome();
+        function greet(name){
+            console.log("hello"+name);
+        }
+        greet("anbu"
+        )
+        function add(a,b){
+            return a+b;
+        }
+        let c=add(10,2);
+        console.log(c);
+         function squre(a){
+            return a*a;
+         }
+         console.log(squre(5));
+          let sub=function(a,b){
+            return a-b;
+          }
+          console.log(sub(10,2));
+
+          let adds=((a1,b)=>{
+            return a1*b;
+          })
+          console.log(adds(29,5));
+
+          function guest(name1="anbu"){
+            console.log(name1);
+          }
+          guest("arulselvi");
+          guest();
+
+
+          function rest(...value){
+            let sum=0;
+            for(let i=0;i<value.length;i++){
+                
+                sum+=value[i];
+           
+          }
+           console.log(sum);}
+         rest(10,20,30,40);
+
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Logo Animation - All 8 CSS Animation Properties</title> 
+ 
+  <style> 
+    body { 
+      font-family:Georgia, 'Times New Roman', Times, serif; 
+      background: #f5f5f5; 
+      text-align: center; 
+      padding: 30px; 
+    } 
+ 
+    .example { 
+      background: white; 
+      padding: 25px; 
+      margin: 20px auto; 
+      max-width: 700px; 
+      border-radius: 10px; 
+    } 
+ 
+    /* Common logo style */ 
+    .logo { 
+      width: 100px; 
+      height: 100px; 
+      margin: 20px auto; 
+      border-radius: 50%; 
+      background: royalblue; 
+      color: white; 
+ 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+ 
+      font-size: 22px; 
+      font-weight: bold; 
+    } 
+ 
+    /* ================================================== 
+       1. animation-name 
+       ================================================== 
+       animation-name tells CSS which @keyframes 
+       animation should be applied to the logo. 
+    */ 
+ 
+    @keyframes logoMove { 
+      from { 
+        transform: translateX(0); 
+ 
+      } 
+ 
+      to { 
+        transform: translateX(250px); 
+      } 
+    } 
+ 
+    .animation-name { 
+      animation-name: logoMove; 
+      animation-duration: 2s; 
+      animation-iteration-count: infinite; 
+      animation-direction: alternate; 
+    } 
+ 
+    /* ================================================== 
+       2. animation-duration 
+       ================================================== 
+       Defines how long one animation cycle takes. 
+       Here, one cycle takes 4 seconds. 
+    */ 
+ 
+    @keyframes logoScale { 
+      from { 
+        transform: scale(1); 
+      } 
+ 
+      to { 
+        transform: scale(1.5); 
+      } 
+    } 
+ 
+    .animation-duration { 
+      animation-name: logoScale; 
+      animation-duration: 4s; 
+      animation-iteration-count: infinite; 
+      animation-direction: alternate; 
+    } 
+ 
+    /* ================================================== 
+       3. animation-timing-function 
+       ================================================== 
+       Controls the speed pattern of the animation. 
+       ease-in-out = slow -> fast -> slow 
+    */ 
+ 
+    @keyframes logoRotate { 
+      from { 
+        transform: rotate(0deg); 
+      } 
+ 
+      to { 
+        transform: rotate(360deg); 
+      } 
+    } 
+ 
+    .animation-timing { 
+      animation-name: logoRotate; 
+      animation-duration: 2s; 
+      animation-timing-function: ease-in-out; 
+      animation-iteration-count: infinite; 
+    } 
+ 
+    /* ================================================== 
+       4. animation-delay 
+       ================================================== 
+       The logo waits for 2 seconds before starting. 
+    */ 
+ 
+    @keyframes logoDelay { 
+      from { 
+        transform: scale(1); 
+      } 
+ 
+      to { 
+        transform: scale(1.4); 
+      } 
+    } 
+ 
+    .animation-delay { 
+      animation-name: logoDelay; 
+      animation-duration: 2s; 
+      animation-delay: 2s; 
+      animation-iteration-count: infinite; 
+      animation-direction: alternate; 
+    } 
+ 
+    /* ================================================== 
+       5. animation-iteration-count 
+       ================================================== 
+       Defines how many times the animation runs. 
+       Here it runs exactly 3 times. 
+    */ 
+ 
+    @keyframes logoRepeat { 
+      from { 
+        transform: translateY(0); 
+      } 
+ 
+      to { 
+        transform: translateY(-80px); 
+      } 
+    } 
+ 
+    .animation-iteration { 
+      animation-name: logoRepeat; 
+      animation-duration: 1s; 
+      animation-iteration-count: 10; 
+      animation-direction: alternate; 
+    } 
+ 
+    /* ================================================== 
+       6. animation-direction 
+       ================================================== 
+       alternate means: 
+       1st cycle -> forward 
+       2nd cycle -> backward 
+       3rd cycle -> forward 
+    */ 
+ 
+    @keyframes logoDirection { 
+      from { 
+        transform: translateX(-100px); 
+      } 
+ 
+      to { 
+        transform: translateX(100px); 
+      } 
+    } 
+ 
+    .animation-direction { 
+      animation-name: logoDirection; 
+      animation-duration: 1.5s; 
+      animation-iteration-count: infinite; 
+      animation-direction: alternate; 
+    } 
+ 
+    /* ================================================== 
+       7. animation-fill-mode 
+       ================================================== 
+       forwards keeps the final keyframe style 
+       after the animation has finished. 
+    */ 
+ 
+    @keyframes logoFill { 
+      from { 
+        transform: translateX(0); 
+        background-color: royalblue; 
+      } 
+ 
+      to { 
+        transform: translateX(250px); 
+        background-color: green; 
+      } 
+    } 
+ 
+    .animation-fill { 
+      animation-name: logoFill; 
+      animation-duration: 2s; 
+      animation-fill-mode: both; 
+    } 
+ 
+    /* ================================================== 
+       8. animation-play-state 
+       ================================================== 
+       running = animation is playing 
+       paused  = animation is paused 
+ 
+       Move the mouse over the logo to pause it. 
+    */ 
+ 
+    @keyframes logoPlay { 
+      from { 
+        transform: rotate(0deg) scale(1); 
+      } 
+ 
+      to { 
+        transform: rotate(360deg) scale(1.3); 
+      } 
+    } 
+ 
+    .animation-play { 
+      animation-name: logoPlay; 
+      animation-duration: 2s; 
+      animation-iteration-count: infinite; 
+      animation-direction: alternate; 
+      animation-play-state: running; 
+    } 
+ 
+    .animation-play:hover { 
+      animation-play-state: paused; 
+    } 
+ 
+  </style> 
+</head> 
+ 
+<body> 
+ 
+  <h1>Logo Animation - All 8 CSS Animation Properties</h1> 
+ 
+  <div class="example"> 
+    <h2>1. animation-name</h2> 
+    <p>The logo moves left and right.</p> 
+ 
+    <div class="logo animation-name">LOGO</div> 
+  </div> 
+ 
+  <div class="example"> 
+    <h2>2. animation-duration</h2> 
+    <p>The animation takes 4 seconds to complete one cycle.</p> 
+ 
+    <div class="logo animation-duration">LOGO</div> 
+  </div> 
+ 
+  <div class="example"> 
+    <h2>3. animation-timing-function</h2> 
+    <p>The logo rotates using ease-in-out.</p> 
+ 
+    <div class="logo animation-timing">LOGO</div> 
+  </div> 
+ 
+  <div class="example"> 
+    <h2>4. animation-delay</h2> 
+    <p>The logo waits 2 seconds before starting.</p> 
+ 
+    <div class="logo animation-delay">LOGO</div> 
+  </div> 
+ 
+  <div class="example"> 
+    <h2>5. animation-iteration-count</h2> 
+    <p>The logo moves exactly 3 times.</p> 
+ 
+    <div class="logo animation-iteration">LOGO</div> 
+  </div> 
+ 
+  <div class="example"> 
+    <h2>6. animation-direction</h2> 
+    <p>The logo moves forward and then backward.</p> 
+ 
+    <div class="logo animation-direction">LOGO</div> 
+  </div> 
+ 
+  <div class="example"> 
+    <h2>7. animation-fill-mode</h2> 
+    <p>The logo stays at the final position after animation ends.</p> 
+ 
+    <div class="logo animation-fill">LOGO</div> 
+  </div> 
+ 
+  <div class="example"> 
+    <h2>8. animation-play-state</h2> 
+    <p>Move the mouse over the logo to pause the animation.</p> 
+ 
+    <div class="logo animation-play">LOGO</div> 
+  </div> 
+ 
+</body> 
+</html> 
+ 

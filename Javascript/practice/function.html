@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Naem(name) {
+            console.log("Name:"+name)
+        }
+        Naem("anbu");
+        Naem("Selvi");
+
+        function add(a,b){
+            return a+b;
+        }
+
+       result= add(10,20);
+       console.log(result);
+
+       function age(n){
+        res=n>=18? "Eligible":"not Eligible";
+        return res;
+       }
+       console.log(age(19));
+
+
+       function studentdetails(name="mani",age=10,id=16){
+        console.log(name);
+        console.log(age);
+        console.log(id);
+       }
+       studentdetails("anbu",10,2);
+       studentdetails(2);
+       studentdetails();
+
+       let sum=function(a,b){
+       return a+b;
+       }
+       res=sum(20,30);
+       console.log(res);
+
+       let add1=(a,b)=>a+b;
+       console.log(add1(45,15));
+
+       let name1 = ()=>{
+console.log("Anbumani");
+       };
+       name1();
+
+
+ 
+    </script>
+</body>
+</html>

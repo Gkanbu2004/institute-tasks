@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="LENGTH()">length</button>
+    <button onclick="TOUPPERCASE()">toupper</button>
+    <button onclick="TOLOWERCASE()">tolower</button>
+    <button onclick="CHARAT()">charat</button>
+    <button onclick="AT()">at</button>
+    <button onclick="INCLUDES()">includes</button>
+    <button onclick="INDEXOF()">Indexof</button>
+    <button onclick="LASTINDEXOF()">lastindex</button>
+    <button onclick="STARTWITH()">startwith</button>
+    <button onclick="ENDWITH()">endwith</button>
+    <button onclick="SLICE()">slice</button>
+    <button onclick="SUBSTRING()">substring</button>
+    <button onclick="REPLACE()">replace</button>
+    <button onclick="REPLACEALL()">replaceall</button>
+    <button onclick="SPLIT()">split</button>
+    <button onclick="TRIM()">trim</button>
+    <div id="ans" style="width: 100%; height: 30px; border: 2px solid blue;padding: 20px;margin-top: 30px;" ></div>
+    <script>
+        let str="Anbu mani"
+        function LENGTH(){
+            document.getElementById("ans").innerHTML=str.length;
+        }
+        function TOUPPERCASE(){
+            document.getElementById("ans").innerHTML=str.toUpperCase();
+        }
+         function TOLOWERCASE(){
+            document.getElementById("ans").innerHTML=str.toLowerCase();
+        }
+        function CHARAT(){
+            document.getElementById("ans").innerHTML=str.charAt(5);
+        }
+         function AT(){
+            document.getElementById("ans").innerHTML=str.at(0);
+        }
+        function INCLUDES(){
+             document.getElementById("ans").innerHTML=str.includes("ANBUM");
+        }
+        function INDEXOF(){
+             document.getElementById("ans").innerHTML=str.indexOf("n");
+        }
+        function LASTINDEXOF(){
+             document.getElementById("ans").innerHTML=str.lastIndexOf("n");
+        }
+        function STARTWITH(){
+            document.getElementById("ans").innerHTML=str.startsWith("A");
+        }
+        function ENDWITH(){
+            document.getElementById("ans").innerHTML=str.endsWith("ani");
+        }
+        function SLICE(){
+            document.getElementById("ans").innerHTML=str.slice(1,6);
+        }
+        function SUBSTRING(){
+            document.getElementById("ans").innerHTML=str.substring(-2);
+        }
+        function REPLACE(){
+  document.getElementById("ans").innerHTML=str.replace("mani","selvi");
+        }
+        function REPLACEALL(){
+            let ob="anbu mani,anbu selvi"
+            document.getElementById("ans").innerHTML=ob.replaceAll("anbu","arul");
+        }
+        function SPLIT(){
+             document.getElementById("ans").innerHTML=JSON.stringify(str.split(" "));
+        }
+        function TRIM(){
+            let a=" anbu"
+            document.getElementById("ans").innerHTML=a.trim();
+            alert(a.length)
+        }
+    </script>
+</body>
+</html>

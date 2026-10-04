@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+     
+    <label for="">Name <input type="text" id="name"></label><br>
+    <label for="">value <input type="text" id="value"></label><br>
+    <button id="savebtn">save</button>
+    <button id="getbtn">get</button>
+    <button id="removebtn">remove</button>
+    <button id="clearbtn">clear</button>
+    <p id="result"></p>
+    <script>
+        //save a value 
+        document.getElementById("savebtn").onclick = () => {
+
+            let n = document.getElementById('name').value;
+            let v = document.getElementById('value').value;
+            sessionStorage.setItem(n, v);
+            document.getElementById('result').innerText = `saved ${n} : ${v}`;
+        };
+
+        //get a value
+
+        document.getElementById("getbtn").onclick = () => {
+            let n = document.getElementById("name").value;
+            let v = sessionStorage.getItem(n);
+            document.getElementById("result").innerText = v ? `${v}` : "key not found";
+        }
+        //remove
+
+        document.getElementById("removebtn").onclick = () => {
+            let n = document.getElementById('name').value;
+            // let v=document.getElementById("value").value;
+            sessionStorage.removeItem(n);
+            document.getElementById("result").innerText = `removed name:${n}`
+        }
+
+        //clear
+
+        document.getElementById("clearbtn").onclick = () => {
+            // let n=document.getElementById("name").value;
+            sessionStorage.clear();
+            document.getElementById("result").innerText = "cleared all sessionstorage"
+        }
+    </script>
+</body>
+
+</html>

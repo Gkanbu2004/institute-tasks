@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="oa" style="border: 2px solid palevioletred;width: 100px; height: 60px;"></div>
+    <button onclick="sortex()">click</button>
+    <div id="na"  style="border: 2px solid palevioletred;width: 100px; height: 60px;"></div>
+    <script>
+        function sortex(){
+        let arr=[1,2,[3,2,3,4],5,6,[5,3]]
+        let ans=arr.flatMap(val=>{
+
+            return [val,val+2]
+        })
+        document.getElementById("na").innerHTML=ans
+        }
+
+        
+    </script>
+</body>
+</html>

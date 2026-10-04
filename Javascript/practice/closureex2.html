@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="wd">withdraw:300</button>
+     <button id="dp">Deposite:500</button>
+      <button id="balance">balance</button>
+      <h1 id="result">balance:1000</h1>
+      <h2 id="b"></h2>
+      <script>
+        function bank(){
+        let bal=1000;
+        return {
+            withdraw:function(){
+                let wp=300;
+                bal-=300;
+                document.getElementById("result").innerHTML=bal;
+            },
+            deposite:function(){
+                let dp=500;
+                bal+=dp
+                document.getElementById("result").innerHTML=bal;
+            },
+            balance:function(){
+               document.getElementById("b").innerHTML=bal;
+            }
+        }
+        
+        }
+
+        const counter=bank();
+        document.getElementById("wd").addEventListener("click",counter.withdraw);
+           document.getElementById("dp").addEventListener("click",counter.deposite);
+              document.getElementById("b").addEventListener("click",counter.balance);
+
+      </script>
+</body>
+</html>

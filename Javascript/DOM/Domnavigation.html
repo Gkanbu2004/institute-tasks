@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <p id="one">one</p>
+          <p id="two">two</p>
+            <p id="three">three</p>
+              <p id="four">four</p>
+                <p id="five">five</p>
+    </div>
+    <script>
+        let demo=document.getElementById("three");
+        console.log("parent element"+demo.parentElement);
+        console.log(demo.parentElement.children);
+        console.log(demo.parentElement.firstElementChild)
+        console.log(demo.parentElement.lastElementChild)
+        console.log(demo.nextElementSibling)
+        console.log(demo.previousElementSibling)
+    </script>
+</body>
+</html>

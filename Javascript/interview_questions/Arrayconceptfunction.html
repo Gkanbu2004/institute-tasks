@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 10px;padding: 10px;
+        }
+        #box{
+            border: 2px solid red;padding: 10px;
+        }
+        button{
+            margin-left: 20px;padding: 10px;
+        }
+        #box2{
+            border: 2px solid black;width: 100%;height: 40px;
+        }
+    </style>
+</head>
+<body><H2>java script array methods</H2>
+    <SPan>Current Array:</SPan>
+    <span id="box"> </span><br><br><br>
+    <button          onclick="arrayfunction()">Array toString</button>
+    <button id="ARRAYAT "onclick="Arrayat()"> Array at(1)</button>
+    <button id="ARRAYJOIN"onclick="Arrayjoin()">Array join()</button>
+    <button id="ARRAYPOP" onclick="Arraypop()">Array pop()</button>
+    <button id="ARRAYPUSH" onclick="Arraypush()">Array Push()</button>
+    <button id="ARRAYSHIFT" onclick="Arryshift()">Array Shift()</button>
+    <button id="ARRAYUNSHIFT" onclick="Arryunshift()">Array unshift()</button>
+    <button onclick="FORLOOP()">FORLOOP</button><br><br><br><br>
+    <div id="box2"></div>
+    <script>
+        let arr=["anbu","arul","selvi","mani","raj"]
+        document.getElementById("box").innerHTML=arr;
+        function arrayfunction(){
+            document.getElementById("box2").innerText=arr.toString();
+             document.getElementById("box").innerHTML=arr;
+        }
+        function Arrayat(){
+               document.getElementById("box2").innerText=arr.at(3);
+                document.getElementById("box").innerHTML=arr;
+        }
+          function Arrayjoin(){
+               document.getElementById("box2").innerText=arr.join(" BEcse ");
+                document.getElementById("box").innerHTML=arr;
+        }
+          function Arraypop(){
+               document.getElementById("box2").innerText=arr.pop();
+                document.getElementById("box").innerHTML=arr;
+        }
+          function Arraypush(){
+            let ps=arr.push("gk mani")
+               document.getElementById("box2").innerText=ps;
+                document.getElementById("box").innerHTML=arr;
+        }
+        function Arryshift(){
+            document.getElementById("box2").innerText=arr.shift();
+                document.getElementById("box").innerHTML=arr;
+        }
+          function Arryunshift(){
+            let arr1=arr.unshift("Anbumani")
+            document.getElementById("box2").innerText=arr1;
+                document.getElementById("box").innerHTML=arr;
+        }
+
+      //  arrayfunction();
+      function FORLOOP(){
+        let a=[1,2,3,4,5,6,7]
+        let newarr="";
+        for(let i=0;i<a.length;i++){
+            newarr+=a[i];
+        }
+        document.getElementById("box2").innerHTML=newarr;
+          document.getElementById("box").innerHTML=a;
+      }
+        
+
+    </script>
+</body>
+</html>

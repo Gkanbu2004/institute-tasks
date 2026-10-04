@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="n1" placeholder="Enter the n1 value">
+    <input type="number" id="n2" placeholder="Enter the n2 value">
+    <button onclick="sum()">add</button>
+    <p id="result"></p>
+    <script>
+     
+        function sum(){
+               let a=Number(document.getElementById("n1").value);
+        let b=Number(document.getElementById("n2").value);
+            let C=a+b;
+            document.getElementById("result").innerHTML="sum of a and b:"+C
+        }
+    </script>
+</body>
+</html>

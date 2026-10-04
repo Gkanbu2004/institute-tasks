@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="form">
+
+    <input type="text" id="name">
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+
+let form = document.querySelector("#form");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.querySelector("#name").value;
+
+    document.querySelector("#result").innerText =
+        "Hello " + name;
+
+});
+
+</script>
+
+</body>
+</html>

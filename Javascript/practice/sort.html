@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="oa" style="border: 2px solid palevioletred;width: 100px; height: 60px;"></div>
+    <button onclick="sortex()">click</button>
+    <div id="na"  style="border: 2px solid palevioletred;width: 100px; height: 60px;"></div>
+    <script>
+        function sortex(){
+        let a=[1,3,2,4,8,5,6,4,5]
+        let ans=a.sort((a,b)=>b-a)
+
+        document.getElementById("na").innerHTML=ans
+        }
+
+        
+    </script>
+</body>
+</html>

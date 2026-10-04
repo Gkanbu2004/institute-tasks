@@ -1,0 +1,61 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Name: <input type="text" id="name"></label>
+    <label for="">Age: <input type="number" id="age"></label>
+    <button id="savebtn" onclick="SAVE()">Save</button>
+    <button id="getbtn" onclick="GET()">Get</button>
+    <button id="removebtn" onclick="REMOVE()">remove</button>
+    <button id="clearbtn" onclick="CLEAR()">Clear</button>
+    <button onclick="KEY()">key</button>
+    <button onclick="LENGTHEX()">length</button>
+    <button onclick="OBJECTEX()">ob</button>
+    <p id="result"></p>
+    <script>
+       let n;
+       let a;
+        function SAVE(){
+            n=document.getElementById("name").value;
+            a=document.getElementById("age").value;
+            localStorage.setItem(n,a);
+            document.getElementById("result").innerHTML=`saved ${n}:${a}`;
+        }
+        function GET(){
+            // n=document.getElementById("name").value;
+            let v= localStorage.getItem(n);
+            document.getElementById("result").innerHTML=v? `${v}`:"key not found"
+        }
+        function REMOVE(){
+            // n=document.getElementById("name").value;
+           // a=document.getElementById("age").value;
+            localStorage.removeItem(n);
+             document.getElementById("result").innerHTML=`Remove item :${n}`;
+        }
+        function CLEAR(){
+            localStorage.clear();
+            document.getElementById("result").innerHTML="cleared all items"
+        }
+       function KEY(){
+       let l= localStorage.key(2);
+         document.getElementById("result").innerHTML=`KEYO OF ${l}`
+       }
+       function LENGTHEX(){
+        let len=localStorage.length;
+        document.getElementById("result").innerHTML=len
+       }
+       function OBJECTEX(){
+        let ob={
+            name:"selvi",
+            age:22
+
+        }
+        localStorage.setItem("ob",JSON.stringify(ob))
+       }
+    </script>
+</body>
+</html>

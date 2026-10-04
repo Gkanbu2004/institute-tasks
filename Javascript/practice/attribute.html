@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Enter your name">
+    <p id="p1"></p>
+    <script>
+        let c=document.getElementById("name");
+       let a= c.getAttribute("placeholder")
+        c.setAttribute("value","4")
+        document.getElementById("p1").innerHTML=a;
+        console.log(a)
+    </script>
+</body>
+</html>

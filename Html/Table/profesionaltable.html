@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        table,td,th{
+            border: 2px;border-color:  black;border-style: solid;padding: 20px;border-collapse: collapse;
+        }
+        thead{
+             font-weight: bolder;
+        }
+        tfoot{
+            text-align: center;background-color: aqua;font-size: larger;font-weight: bolder;
+        }
+        tr:nth-child(even){
+            background-color: rgb(232, 110, 22);
+        }
+        td:nth-child(even){
+             background-color: rgba(233, 185, 151, 0.4);
+        }
+        th:nth-child(even){
+             background-color: rgba(233, 185, 151, 0.4);
+        }
+        th:hover{
+            background-color: black;
+        }
+        tr:hover{
+            background-color: brown;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                NAME
+            </th>
+            <th>DEPARTMENT</th>
+            <th>MARK</th>
+        </tr></thead>
+       <tbody> <tr>
+            <td>1</td>
+            <td>Anbu</td>
+            <td>Cse</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>mani</td>
+            <td>Cse</td>
+            <td>89</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>arul</td>
+            <td>Cse</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>selvi</td>
+            <td>Cse</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>susi</td>
+            <td>Cse</td>
+            <td>80</td>
+        </tr></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total mark</td>
+                <td>409</td>
+            </tr>
+         
+        </tfoot>
+    </table>
+</body>
+</html>
